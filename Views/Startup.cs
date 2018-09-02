@@ -14,6 +14,7 @@ namespace Views
         {
             services.AddMvc();
             services.Configure<MvcViewOptions>(options => {
+                options.ViewEngines.Clear();
                 options.ViewEngines.Insert(0, new DebugDataViewEngine());
             });
         }
