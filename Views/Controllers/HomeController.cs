@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Views.Controllers
 {
@@ -7,10 +6,7 @@ namespace Views.Controllers
     {
         public ViewResult Index()
         {
-            ViewBag.Message = "Hello, World";
-            ViewBag.Time = DateTime.Now.ToString("HH:mm:ss");
-
-            return View("DebugData");
+            return View(new string[] { "Apple", "Orange", "Pear" });
         }
 
         public ViewResult List()
